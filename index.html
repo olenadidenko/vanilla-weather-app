@@ -14,101 +14,107 @@
     <title>Weather App</title>
   </head>
   <body>
-     <div class="conteiner">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
+    <div class="conteiner">
+      <div class="weather-in-city">
+        <form>
           <div class="row">
-            <div class="col-9"> 
-            <input type="search" placeholder="Type a city.." autofocus="on" autocomplete="off" id="city-input" class="form-control shadow-sm">
+            <div class="col-9" id="input-city">
+              <input
+                type="text"
+                class="form-control"
+                id="inputcity"
+                placeholder="Enter city..."
+              />
             </div>
-            <div class="col-3">
-              <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm">
+            <div class="col-3" id="search-button">
+              <button
+                type="submit"
+                class="btn btn-primary w-100"
+                id="button-w100"
+              >
+                Search
+              </button>
             </div>
-            </div>
+          </div>
         </form>
-        <h1 class = "city-input" id = "seached-city">City, country</h1>
-        <ul>
-          <li class="todayIs">
-            Sunday 8, May 12:00
-          </li>
-          <li class="weather">Sunny</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <span class="temp" id="degrees-temp">t °C</span>
-            
-          </div>
-          <div class="col-6">
-            <ul>
-                <li>Humidity: 
-                    <span class="humidity "></span>
+        <div class="weather-city-result">
+          <div class="row">
+            <div class="col-6" id="city-day-param">
+              <h1 class="city-input" id="seached-city">Vinnytsia</h1>
+              <ul>
+                <li class="todayIs">
+                  Sunday 8, May 12:00 <span class="weather">Sunny</span>
                 </li>
-              <li>Wind: 
-                  <span class="wind "></span>
-              </li>
-              <li>Pressure: <span class="pressure"></span></li>
-                </ul>
-          </div>
-        </div>
-        <div class="dayresult">
-        <div class="row">
-          <div class="col-sm-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">MON</h5>
-                <p class="card-text">09.05.22</p>
-                <img src="img/cloudy.png" alt="cloudy" width="80"  height="60">
-                <p class="card-text">22°C</p>
-              </div>
+                <li>
+                  Humidity:
+                  <span class="humidity"></span>
+                </li>
+                <li>
+                  Wind:
+                  <span class="wind"></span>
+                </li>
+                <li>Pressure: <span class="pressure"></span></li>
+              </ul>
             </div>
-          </div>
-          <div class="col-sm-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">TUE</h5>
-                <p class="card-text">10.05.22</p>
-                 <img src="img/cloudy.png" alt="cloudy" width="80"
-                 height="60">
-                <p class="card-text">21°C</p>
-              </div>
+            <div class="col-6" id="img-temp-c-f">
+              <img
+                src="img/sunny.png"
+                alt="sunny icon"
+                class="weather-icon float-left"
+                id="today-weather-img"
+              />
+              <span class="temp" id="degrees-temp">25</span>
+              <span class="units">
+                <a href="#" id="degreesC">°C </a>|
+                <a href="#" id="degreesF">°F</a>
+              </span>
             </div>
-          </div>
-          <div class="col-sm-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">WED</h5>
-                <p class="card-text">11.05.22</p>
-                <img src="img/partly-cloudy.png" alt="partly-cloudy" width="60">
-                <p class="card-text">22°C</p>
+            <div class="weather-for-five-days">
+              <div class="col">
+                <div class="day-of-the-week">MON</div>
+                <img src="img/cloudy.png" width="50" height="50" />
+                <div class="day-temp">
+                  <span class="max-day-temp">20°C</span>
+                  <span class="mim-day-temp">15°C</span>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-sm-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">THU</h5>
-                <p class="card-text">12.05.22</p>
-               <img src="img/sunny.png" alt="partly-cloudy" width="60">
-                <p class="card-text">18°C</p>
+              <div class="col">
+                <div class="day-of-the-week">MON</div>
+                <img src="img/cloudy.png" width="50" height="50" />
+                <div class="day-temp">
+                  <span class="max-day-temp">20°C</span>
+                  <span class="mim-day-temp">15°C</span>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-sm-2">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">FRI</h5>
-                <p class="card-text">13.05.22</p>
-                 <img src="img/partly-cloudy.png" alt="partly-cloudy" width="60">
-                <p class="card-text">20°C</p>
+              <div class="col">
+                <div class="day-of-the-week">MON</div>
+                <img src="img/cloudy.png" width="50" height="50" />
+                <div class="day-temp">
+                  <span class="max-day-temp">20°C</span>
+                  <span class="mim-day-temp">15°C</span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="day-of-the-week">MON</div>
+                <img src="img/cloudy.png" width="50" height="50" />
+                <div class="day-temp">
+                  <span class="max-day-temp">20°C</span>
+                  <span class="mim-day-temp">15°C</span>
+                </div>
+              </div>
+              <div class="col">
+                <div class="day-of-the-week">MON</div>
+                <img src="img/cloudy.png" width="50" height="50" />
+                <div class="day-temp">
+                  <span class="max-day-temp">20°C</span>
+                  <span class="mim-day-temp">15°C</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="sourceCodeLink">
-    <a href="https://github.com/olenadidenko/First-project.git" class="codeLink">Open-source code</a> <span>by Olema Didenko</span>
-  </div>
     <script src="src/app.js"></script>
   </body>
 </html>

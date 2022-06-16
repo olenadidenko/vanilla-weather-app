@@ -1,0 +1,72 @@
+.conteiner{
+    font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+    display: block;
+    max-width: 780px;
+    min-width: 400px;
+    width: 100%;
+    background: rgb(251, 252, 255);
+    border: 1px solid rgb(245, 244, 244);
+    border-radius: 5px;
+    box-shadow: 0 0px 10px rgb(224, 242, 246);
+    padding: 20px 20px;
+    margin:50px auto;
+   }
+h1{
+   font-size: 64px;
+   color: rgb(33, 33, 33);
+   font-weight: 500;
+   margin: 0;
+    font-weight: 400;
+    line-height: 1;
+   }
+.weather-city-result{
+    padding:60px 20px ;
+   }
+#search-button{
+    padding: 0px 20px 0 5px;
+}
+#input-city{
+    padding: 0 5px 0 20px;
+}
+#button-w100{
+    background: rgb(241, 86, 9);
+    border: 1px solid rgb(241, 86, 9);
+}
+ul{
+    padding: 20px 0 0 0;
+    list-style: none;
+    margin: 0;
+}
+#city-day-param{
+   
+    padding: 0 0 40px 0;
+}
+#img-temp-c-f{
+    display: flex;
+    align-items: center;
+    padding: 0 0 40px 0;
+}
+.units {
+    padding: 0 5px;
+    position: relative;
+    top: -20px;}
+
+#degrees-temp{
+    font-size: 54px;
+}
+.weather-for-five-days{
+    display: flex;
+align-items: stretch;
+}
+.col{
+text-align: center;
+}
+#degrees-temp{
+    color: rgb(33, 33, 33);
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+}
+#today-weather-img{
+    height: 180px;
+}
