@@ -1,5 +1,8 @@
+
+body{
+   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+}
 .conteiner{
-    font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
     display: block;
     max-width: 780px;
     min-width: 400px;
@@ -8,18 +11,28 @@
     border: 1px solid rgb(245, 244, 244);
     border-radius: 5px;
     box-shadow: 0 0px 10px rgb(224, 242, 246);
-    padding: 20px 20px;
-    margin-top:50px
+    padding: 40px 40px;
+    margin:50px auto;
    }
 h1{
-   font-size: 45px;
-   color: rgb(33, 33, 33);
-   font-weight: 500;
-   margin: 0;
-
-    font-weight: 400;
-    line-height: 1;
+    color: #7c7c7c;
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 0 10px 0;
    }
+ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+li {
+    color: #7c7c7c;
+    font-size:18px;
+    font-weight: 300;
+    line-height: 1.2;
+    list-style: none;
+}
 .weather-city-result{
     padding:60px 20px 40px 20px;
    }
@@ -33,13 +46,7 @@ h1{
     background: rgb(241, 86, 9);
     border: 1px solid rgb(241, 86, 9);
 }
-ul{
-    padding: 20px 0 0 0;
-    list-style: none;
-    margin: 0;
-}
 #city-day-param{
-   
     padding: 0 0 40px 0;
 }
 #img-temp-c-f{
@@ -51,7 +58,6 @@ ul{
     padding: 0 5px;
     position: relative;
     top: -20px;}
-
 #degrees-temp{
     font-size: 54px;
 }
@@ -61,19 +67,19 @@ align-items: stretch;
 }
 .col{
 text-align: center;
+color: #7c7c7c;
 }
 #degrees-temp{
-    color: rgb(33, 33, 33);
+color: #7c7c7c;
     font-size: 64px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1;
 }
 #today-weather-img{
     height: 180px;
 }
-
 .git-source{
-    display: block;
-  text-align: center;
+   display: block;
+   text-align: center;
    margin: 0 auto;
 }
