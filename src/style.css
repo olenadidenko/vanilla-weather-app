@@ -21,7 +21,7 @@ h1{
     line-height: 1;
    }
 .weather-city-result{
-    padding:60px 20px 0 20px;
+    padding:60px 20px 40px 20px;
    }
 #search-button{
     padding: 0px 20px 0 5px;
@@ -73,5 +73,7 @@ text-align: center;
 }
 
 .git-source{
-    padding-left:20px ;
+    display: block;
+  text-align: center;
+   margin: 0 auto;
 }
