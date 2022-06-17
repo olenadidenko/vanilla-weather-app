@@ -29,9 +29,14 @@ ul {
 li {
     color: #7c7c7c;
     font-size:18px;
+     
     font-weight: 300;
     line-height: 1.2;
     list-style: none;
+}
+.weather{
+    text-transform: capitalize;
+
 }
 .weather-city-result{
     padding:60px 20px 40px 20px;

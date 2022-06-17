@@ -10,6 +10,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
@@ -40,20 +41,20 @@
         <div class="weather-city-result">
           <div class="row">
             <div class="col-6" id="city-day-param">
-              <h1 class="city-input" id="seached-city">Vinnytsia</h1>
+              <h1 class="city-input" id="seached-city"></h1>
               <ul>
                 <li class="todayIs">
-                  Sunday 8, May 12:00 <span class="weather">Sunny</span>
+                  Sunday 8, May 12:00 <span class="weather"></span>
                 </li>
                 <li>
                   Humidity:
-                  <span class="humidity"></span>
+                  <span class="humidity"></span> %
                 </li>
                 <li>
                   Wind:
-                  <span class="wind"></span>
+                  <span class="wind"> </span> m/s
                 </li>
-                <li>Pressure: <span class="pressure"></span></li>
+                <li>Pressure: <span class="pressure"></span> hpa</li>
               </ul>
             </div>
             <div class="col-6" id="img-temp-c-f">
@@ -63,7 +64,7 @@
                 class="weather-icon float-left"
                 id="today-weather-img"
               />
-              <span class="temp" id="degrees-temp">25</span>
+              <span class="temp" id="degrees-temp"></span>
               <span class="units">
                 <a href="#" id="degreesC">°C </a>|
                 <a href="#" id="degreesF">°F</a>
