@@ -42,10 +42,11 @@ function getTemp(response){
     let currentTemp = document.querySelector("#degrees-temp");
     let currentCity = document.querySelector("#seached-city");
     let currentHumidity = document.querySelector(".humidity");
-    let currentDescription = document.querySelector(".weather");
+    let currentDescription = document.querySelector(".todayweather");
     let currentWind = document.querySelector(".wind");
     let currentPressure = document.querySelector(".pressure");
     let currentDate = document.querySelector(".todayIs");
+    let currentIcon = document.querySelector("#icon");
     currentTemp.innerHTML = Math.round (response.data.main.temp);
     currentCity.innerHTML = response.data.name;
     currentHumidity.innerHTML = response.data.main.humidity;
@@ -53,6 +54,7 @@ function getTemp(response){
     currentWind.innerHTML = Math.round(response.data.wind.speed);
     currentPressure.innerHTML = response.data.main.pressure;
     currentDate.innerHTML = formatData(response.data.dt * 1000);
+    currentIcon.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 let city = "Lviv"
 let apiKey = "28380c9029ac812a2a683ccc768f6493";

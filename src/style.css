@@ -34,9 +34,8 @@ li {
     line-height: 1.2;
     list-style: none;
 }
-.weather{
+.todayweather{
     text-transform: capitalize;
-
 }
 .weather-city-result{
     padding:60px 20px 40px 20px;
@@ -80,7 +79,7 @@ color: #7c7c7c;
     font-weight: 500;
     line-height: 1;
 }
-#today-weather-img{
+#icon{
     height: 180px;
 }
 .git-source{
