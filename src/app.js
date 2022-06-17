@@ -55,8 +55,9 @@ function getTemp(response){
     currentPressure.innerHTML = response.data.main.pressure;
     currentDate.innerHTML = formatData(response.data.dt * 1000);
     currentIcon.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    currentIcon.setAttribute ("alt", response.data.weather[0].description);
 }
-let city = "Lviv"
+let city = "oslo"
 let apiKey = "28380c9029ac812a2a683ccc768f6493";
 let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
