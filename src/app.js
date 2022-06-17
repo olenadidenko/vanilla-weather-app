@@ -54,7 +54,8 @@ function getTemp(response){
     currentPressure.innerHTML = response.data.main.pressure;
     currentDate.innerHTML = formatData(response.data.dt * 1000);
 }
+let city = "Lviv"
 let apiKey = "28380c9029ac812a2a683ccc768f6493";
-let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=Kiev&appid=${apiKey}&units=metric`;
+let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(getTemp)
