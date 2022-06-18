@@ -34,11 +34,10 @@ function formatData(timestemp){
   "November",
   "December"];
     let mounth = mounths[now.getMonth()];
-    return `${day}, ${date} ${mounth}, ${hours}:${minutes}`
+    return `${day}, ${date} ${mounth}, ${hours}:${minutes}`;
 }
 
 function getTemp(response){
-    console.log(response)
     let currentTemp = document.querySelector("#degrees-temp");
     let currentCity = document.querySelector("#seached-city");
     let currentHumidity = document.querySelector(".humidity");
@@ -57,8 +56,19 @@ function getTemp(response){
     currentIcon.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     currentIcon.setAttribute ("alt", response.data.weather[0].description);
 }
-let city = "oslo"
+
+function search (city){
 let apiKey = "28380c9029ac812a2a683ccc768f6493";
 let apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(getTemp)
+}
+
+function userInputCity(event){
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+ }
+
+let formInput = document.querySelector("#search-form");
+formInput.addEventListener("submit", userInputCity)
