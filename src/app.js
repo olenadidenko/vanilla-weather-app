@@ -46,7 +46,10 @@ function getTemp(response){
     let currentPressure = document.querySelector(".pressure");
     let currentDate = document.querySelector(".todayIs");
     let currentIcon = document.querySelector("#icon");
-    currentTemp.innerHTML = Math.round (response.data.main.temp);
+
+    celsiumTemp = response.data.main.temp;
+
+    currentTemp.innerHTML = Math.round (celsiumTemp);
     currentCity.innerHTML = response.data.name;
     currentHumidity.innerHTML = response.data.main.humidity;
     currentDescription.innerHTML = response.data.weather[0].description;
@@ -70,5 +73,35 @@ function userInputCity(event){
   search(cityInputElement.value);
  }
 
+ function displayFahrenheitTemp(event){
+  event.preventDefault();
+  celsium.classList.remove("activ");
+  fahrenheit.classList.add("activ");
+
+  let tempF = (celsiumTemp * 9)/5 + 32;
+  let currentTemp = document.querySelector("#degrees-temp");
+  currentTemp.innerHTML = Math.round(tempF);
+ }
+
+ function displayCelsiumTemp(event){
+  event.preventDefault();
+
+  celsium.classList.add("activ");
+  fahrenheit.classList.remove("activ");
+
+   let tempC = document.querySelector("#degrees-temp");
+   tempC.innerHTML = Math.round(celsiumTemp);
+ }
+
+let celsiumTemp = null;
+
 let formInput = document.querySelector("#search-form");
-formInput.addEventListener("submit", userInputCity)
+formInput.addEventListener("submit", userInputCity);
+
+let fahrenheit = document.querySelector("#degreesF");
+fahrenheit.addEventListener("click",displayFahrenheitTemp);
+
+let celsium = document.querySelector("#degreesC");
+celsium.addEventListener("click", displayCelsiumTemp);
+
+search("Vinnytsia");
