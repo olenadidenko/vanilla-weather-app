@@ -17,7 +17,7 @@ body{
    }
 h1{
     color: #7c7c7c;
-    font-size: 32px;
+    font-size: 26px;
     font-weight: 500;
     margin: 0;
     padding: 0 0 10px 0;
@@ -29,7 +29,7 @@ ul {
 }
 li {
     color: #7c7c7c;
-    font-size:18px;
+    font-size:14px;
      
     font-weight: 300;
     line-height: 1.2;
@@ -52,12 +52,12 @@ li {
     border: 1px solid rgb(241, 86, 9);
 }
 #city-day-param{
-    padding: 0 0 40px 0;
+    padding: 0;
 }
 #img-temp-c-f{
     display: flex;
     align-items: center;
-    padding: 0 0 40px 0;
+    padding: 0;
 }
 .units {
     padding: 0 5px;
@@ -72,6 +72,7 @@ li {
 align-items: stretch;
 }
 .col{
+font-size: 14px;
 text-align: center;
 color: #7c7c7c;
 }
@@ -95,8 +96,17 @@ color: #7c7c7c;
     cursor: default;
 }
 #degreesC{
+    font-size: 14px;
     text-decoration: none;
 }
 #degreesF{
+    font-size: 14px;
     text-decoration: none;
 }
+.max-day-temp{
+    color: #7c7c7c;
+}
+.mim-day-temp{
+        color: #7c7c7c;
+        opacity: 0.6;
+    }
