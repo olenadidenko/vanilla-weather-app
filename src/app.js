@@ -37,6 +37,29 @@ function formatData(timestemp){
     return `${day}, ${date} ${mounth}, ${hours}:${minutes}`;
 }
 
+function displayForcast(){
+  let forcaseElement = document.querySelector("#forcast");
+  let forcastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri","Sat","Sun","Mon"];
+  days.forEach(function(day) {
+  forcastHTML = forcastHTML + `        
+          <div class="col" >
+            <div class="day-of-the-week">${day}</div>
+             <img src="img/cloudy.png" width="50" height="50" />
+              <div class="day-temp">
+               <span class="max-day-temp">20°C</span>
+               <span class="mim-day-temp">15°C</span>
+              </div>
+            </div>
+          
+        `;
+  })  
+  
+  forcastHTML = forcastHTML + `</div>`;  
+  forcaseElement.innerHTML = forcastHTML;
+              
+}
+
 function getTemp(response){
     let currentTemp = document.querySelector("#degrees-temp");
     let currentCity = document.querySelector("#seached-city");
@@ -104,4 +127,5 @@ fahrenheit.addEventListener("click",displayFahrenheitTemp);
 let celsium = document.querySelector("#degreesC");
 celsium.addEventListener("click", displayCelsiumTemp);
 
+displayForcast();
 search("Vinnytsia");
