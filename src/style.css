@@ -73,12 +73,17 @@ li {
 }
 .weather-for-five-days{
     display: flex;
-align-items: stretch;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 .col{
 font-size: 14px;
 text-align: center;
 color: #7c7c7c;
+padding: 0;
+width: 100px;
+margin: 5px 10px;
 }
 #icon{
     height: 180px;
