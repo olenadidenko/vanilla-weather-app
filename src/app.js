@@ -37,23 +37,41 @@ function formatData(timestemp){
     return `${day}, ${date} ${mounth}, ${hours}:${minutes}`;
 }
 
+function formatDayForcast(timestemp){
+  let date = new Date(timestemp*1000);
+  let day = date.getDay();
+  let days = ["Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat",
+  "Sun"]
+
+  return days[day];
+}
+
 function displayForcast(response){
-  console.log(response.data.daily);
+  console.log(response.data);
+  let forcast = response.data.daily;
   let forcaseElement = document.querySelector("#forcast");
   let forcastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri","Sat","Sun","Mon"];
-  days.forEach(function(day) {
-  forcastHTML = forcastHTML + `        
+  forcast.forEach(function(forcastDay,index) {
+    if (index<6){
+     forcastHTML = forcastHTML + `        
           <div class="col" >
-            <div class="day-of-the-week">${day}</div>
-             <img src="img/cloudy.png" width="50" height="50" />
+            <div class="day-of-the-week">${formatDayForcast(forcastDay.dt)}</div>
+             <img src="http://openweathermap.org/img/wn/${forcastDay.weather[0].icon}@2x.png" width="50" height="50" />
               <div class="day-temp">
-               <span class="max-day-temp">20°C</span>
-               <span class="mim-day-temp">15°C</span>
+               <span class="max-day-temp">${Math.round(forcastDay.temp.max)}°C</span>
+               <span class="mim-day-temp">${Math.round(forcastDay.temp.min)}°C</span>
               </div>
             </div>
           
         `;
+        
+    }
   })  
   
   forcastHTML = forcastHTML + `</div>`;  
@@ -62,7 +80,7 @@ function displayForcast(response){
 }
 function getForcast (coordinates){
   let apiKey = "28380c9029ac812a2a683ccc768f6493";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metrics`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForcast);
 
 }
