@@ -53,7 +53,7 @@ function formatDayForcast(timestemp){
 }
 
 function displayForcast(response){
-  console.log(response.data);
+  
   let forcast = response.data.daily;
   let forcaseElement = document.querySelector("#forcast");
   let forcastHTML = `<div class="row">`;
