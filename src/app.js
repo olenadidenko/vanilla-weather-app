@@ -67,11 +67,8 @@ function displayForcast(response){
                <span class="max-day-temp">${Math.round(forcastDay.temp.max)}°C</span>
                <span class="mim-day-temp">${Math.round(forcastDay.temp.min)}°C</span>
               </div>
-            </div>
-          
-        `;
-        
-    }
+            </div>`;
+     }
   })  
   
   forcastHTML = forcastHTML + `</div>`;  
@@ -123,36 +120,13 @@ function userInputCity(event){
   search(cityInputElement.value);
  }
 
- function displayFahrenheitTemp(event){
-  event.preventDefault();
-  celsium.classList.remove("activ");
-  fahrenheit.classList.add("activ");
-
-  let tempF = (celsiumTemp * 9)/5 + 32;
-  let currentTemp = document.querySelector("#degrees-temp");
-  currentTemp.innerHTML = Math.round(tempF);
- }
-
  function displayCelsiumTemp(event){
   event.preventDefault();
-
-  celsium.classList.add("activ");
-  fahrenheit.classList.remove("activ");
-
    let tempC = document.querySelector("#degrees-temp");
    tempC.innerHTML = Math.round(celsiumTemp);
  }
 
-let celsiumTemp = null;
-
 let formInput = document.querySelector("#search-form");
 formInput.addEventListener("submit", userInputCity);
-
-let fahrenheit = document.querySelector("#degreesF");
-fahrenheit.addEventListener("click",displayFahrenheitTemp);
-
-let celsium = document.querySelector("#degreesC");
-celsium.addEventListener("click", displayCelsiumTemp);
-
 
 search("Vinnytsia");

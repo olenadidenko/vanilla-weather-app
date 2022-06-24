@@ -60,12 +60,16 @@ li {
     padding: 0;
 }
 .units {
+    color: #7c7c7c;
     padding: 0 5px;
     position: relative;
     top: -20px;}
 
 #degrees-temp{
-    font-size: 54px;
+    color: #7c7c7c;
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 1;
 }
 .weather-for-five-days{
     display: flex;
@@ -75,12 +79,6 @@ align-items: stretch;
 font-size: 14px;
 text-align: center;
 color: #7c7c7c;
-}
-#degrees-temp{
-color: #7c7c7c;
-    font-size: 64px;
-    font-weight: 500;
-    line-height: 1;
 }
 #icon{
     height: 180px;
@@ -94,14 +92,6 @@ color: #7c7c7c;
     text-decoration: none;
     color: #7c7c7c;
     cursor: default;
-}
-#degreesC{
-    font-size: 14px;
-    text-decoration: none;
-}
-#degreesF{
-    font-size: 14px;
-    text-decoration: none;
 }
 .max-day-temp{
     color: #7c7c7c;
