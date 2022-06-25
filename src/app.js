@@ -56,7 +56,7 @@ function displayForcast(response){
   
   let forcast = response.data.daily;
   let forcaseElement = document.querySelector("#forcast");
-  let forcastHTML = `<div class="row">`;
+  let forcastHTML = `<div class="row" id="daily-forecast">`;
   forcast.forEach(function(forcastDay,index) {
     if (index<6){
      forcastHTML = forcastHTML + `        
