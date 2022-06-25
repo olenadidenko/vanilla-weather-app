@@ -5,7 +5,7 @@ body{
 }
 .conteiner{
     display: block;
-    max-width: 1024px;
+    max-width: 700px;
     min-width: 375px;
     width: 100%;
     background: rgb(251, 252, 255);
@@ -110,7 +110,11 @@ margin: 5px 10px;
         color: #7c7c7c;
         opacity: 0.6;
     }
-        .row{
+.row{
             display: flex;
             flex-wrap: wrap;
         }
+#img-temp-c-f{
+    display: flex;
+    justify-content: flex-end;
+}
