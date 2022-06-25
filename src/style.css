@@ -5,8 +5,8 @@ body{
 }
 .conteiner{
     display: block;
-    max-width: 780px;
-    min-width: 400px;
+    max-width: 1024px;
+    min-width: 375px;
     width: 100%;
     background: rgb(251, 252, 255);
     border: 1px solid rgb(245, 244, 244);
@@ -39,7 +39,12 @@ li {
     text-transform: capitalize;
 }
 .weather-city-result{
+    
     padding:60px 20px 40px 20px;
+   }
+   #search-form{
+    display: flex;
+    justify-content: flex-start;
    }
 #search-button{
     padding: 0px 20px 0 5px;
@@ -47,7 +52,7 @@ li {
 #input-city{
     padding: 0 5px 0 20px;
 }
-#button-w100{
+#button-w130{
     background: rgb(241, 86, 9);
     border: 1px solid rgb(241, 86, 9);
 }
@@ -67,7 +72,7 @@ li {
 
 #degrees-temp{
     color: #7c7c7c;
-    font-size: 64px;
+    font-size: 50px;
     font-weight: 500;
     line-height: 1;
 }
@@ -86,7 +91,7 @@ width: 100px;
 margin: 5px 10px;
 }
 #icon{
-    height: 180px;
+    height:70px;
 }
 .git-source{
    display: block;
@@ -105,3 +110,7 @@ margin: 5px 10px;
         color: #7c7c7c;
         opacity: 0.6;
     }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
